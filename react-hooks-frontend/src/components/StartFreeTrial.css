@@ -1,0 +1,300 @@
+/* StartFreeTrial.css - Futuristic SaaS Theme Aligned */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+.trial-container-1 {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.trial-container-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(59, 130, 246, 0.1) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.trial-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #10b981 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trial-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.trial-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.trial-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trial-form input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.trial-form input:focus {
+  outline: none;
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+.trial-form input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.trial-button {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trial-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.4);
+}
+
+.trial-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.trial-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.trial-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.form-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+}
+
+.form-message.success {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.form-message.error {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.password-strength {
+  margin-top: 0.5rem;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.password-strength-bar {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 2px;
+}
+
+.password-strength-bar.weak {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+  width: 33%;
+}
+
+.password-strength-bar.medium {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  width: 66%;
+}
+
+.password-strength-bar.strong {
+  background: linear-gradient(90deg, #10b981, #34d399);
+  width: 100%;
+}
+
+.trial-features {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.trial-features h4 {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.trial-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trial-features li {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.trial-features li:before {
+  content: attr(data-icon);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #10b981;
+}
+
+.trial-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trial-footer p {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.trial-footer a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.trial-footer a:hover {
+  color: #059669;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trial-container-1 {
+    margin: 20px;
+    padding: 2rem;
+  }
+  
+  .trial-form h2 {
+    font-size: 1.5rem;
+  }
+  
+  .trial-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .trial-button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trial-container-1 {
+    margin: 10px;
+    padding: 1.5rem;
+  }
+  
+  .trial-features {
+    padding: 1rem;
+  }
+  
+  .trial-features li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Floating Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
