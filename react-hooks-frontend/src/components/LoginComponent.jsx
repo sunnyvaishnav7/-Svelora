@@ -12,6 +12,7 @@ const LoginComponent = () => {
     setLoading(true);
     setMessage('');
     try {
+      //there was we have to call the API here for login backend API replace it
       const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -31,7 +32,7 @@ const LoginComponent = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
-          <label class="top">Email</label>
+          <label className="top">Email</label>
           <input
             type="email"
             value={email}
@@ -40,7 +41,7 @@ const LoginComponent = () => {
           />
         </div>
         <div className="form-group">
-          <label class="top">Password</label>
+          <label className="top">Password</label>
           <input
             type="password"
             value={password}
