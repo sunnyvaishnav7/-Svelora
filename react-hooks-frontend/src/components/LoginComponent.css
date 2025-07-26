@@ -11,6 +11,9 @@
   position: relative;
   overflow: hidden;
 }
+.top{
+ text-emphasis-color: black;
+}
 
 .login-container::before {
   content: '';

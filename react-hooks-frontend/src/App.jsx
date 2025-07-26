@@ -43,9 +43,9 @@ function App() {
             
             <Route path='/payment' element={< PaymentComponent />} />
             
-            <Route path="/employee" element={isLoggedIn() ? <ListEmployeeComponent /> : <Navigate to="/login" />} />
+            {/* <Route path="/employee" element={isLoggedIn() ? <ListEmployeeComponent /> : <Navigate to="/login" />} /> */}
             
-            <Route path='/employees' element={<ListEmployeeComponent />} />
+            <Route path='/employee' element={<ListEmployeeComponent />} />
 
             <Route path='/peformence' element={<HrDashboard />} />
 
